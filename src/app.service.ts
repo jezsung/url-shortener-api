@@ -12,8 +12,4 @@ export class AppService {
     const link = await this.prisma.link.findUnique({ where: { id: +id } });
     return link.url;
   }
-
-  getHello(): string {
-    return 'Hello World!';
-  }
 }

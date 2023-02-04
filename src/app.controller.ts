@@ -14,9 +14,4 @@ export class AppController {
     const url = await this.appService.getOriginUrl(hashedId);
     res.status(301).redirect(url);
   }
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
 }
