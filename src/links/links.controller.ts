@@ -14,7 +14,7 @@ export class LinksController {
     const hashedId = await this.linksService.create(createLinkDto);
 
     return {
-      shortenUrl: `http://${host}/${hashedId}`,
+      shortenedUrl: `http://${host}/${hashedId}`,
     };
   }
 }
