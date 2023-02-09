@@ -1,5 +1,5 @@
 [phases.build]
-dependsOn = ['setup']
+dependsOn = ['install']
 cmd = 'npm run build'
 
 [phases.migrate]
