@@ -2,7 +2,7 @@
 dependsOn = ['install']
 cmd = 'npm run build'
 
-[phases.release]
+[phase.release]
 dependsOn = ['build']
 cmd = 'npx prisma migrate deploy'
 
