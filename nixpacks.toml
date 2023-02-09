@@ -1,8 +1,11 @@
 [phases.build]
+dependsOn = ['setup']
 cmd = 'npm run build'
 
 [phases.migrate]
+dependsOn = ['build']
 cmd = 'npx prisma migrate deploy'
 
 [start]
+dependsOn = ['migrate']
 cmd = 'npm run start:prod'
