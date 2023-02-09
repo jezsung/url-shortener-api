@@ -1,8 +1,5 @@
 [phases.build]
 cmd = 'npm run build'
 
-[phase.release]
-cmd = 'npx prisma migrate deploy'
-
 [start]
-cmd = 'npm run start:prod'
+cmds = ['npx prisma migrate deploy', 'npm run start:prod']
