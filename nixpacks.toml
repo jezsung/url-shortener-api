@@ -2,7 +2,7 @@
 cmd = 'npm run build'
 
 [phases.migrate]
-cmd = 'npx prisma migration deploy'
+cmd = 'npx prisma migrate deploy'
 
 [start]
 cmd = 'npm run start:prod'
