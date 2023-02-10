@@ -8,9 +8,10 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const env = configService.get<'development' | 'production'>('NODE_ENV');
   const port = configService.get<number>('PORT');
+  const corsDomain = configService.get<string>('CORS_DOMAIN');
 
   app.enableCors({
-    origin: env === 'production' ? 'same-origin' : '*',
+    origin: env === 'production' ? corsDomain : '*',
     credentials: false,
   });
 
